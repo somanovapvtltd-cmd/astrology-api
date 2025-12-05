@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
+from flask_cors import CORS
+CORS(app)
 
 SWISS_URL = "https://ephemeris-api.herokuapp.com/position"  # external Swiss Ephemeris API
 
